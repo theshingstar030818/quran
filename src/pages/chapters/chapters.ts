@@ -27,4 +27,11 @@ export class ChaptersPage {
     console.log('ionViewDidLoad ChaptersPage');
   }
 
+  openChapter(chapterId: number) {
+    debugger;
+    this.navCtrl.push('VersesPage', {
+      chapterId: chapterId
+    });
+  }
+
 }

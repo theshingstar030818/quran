@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { VerseProvider } from '../../providers/verse/verse';
+
 /**
  * Generated class for the VersesPage page.
  *
@@ -15,11 +17,31 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VersesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  chapterId: number;
+  verses: any;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public verseProvider: VerseProvider
+  ){
+    this.chapterId = navParams.get('chapterId');
+    this.verses = [];
+  }
+  
+  ionViewDidLoad() {
+    debugger;
+    
+    this.verseProvider.getAllVerses(this.chapterId)
+    .then((data) => {
+      this.verses = data['verses'];
+      console.log("the verse promise ", this.verses);
+      console.log(data);
+    }), (error) => { 
+      console.error(error);
+    }
+    
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad VersesPage');
-  }
 
 }

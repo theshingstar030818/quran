@@ -1,13 +1,6 @@
 import { Injectable } from '@angular/core';
-// import { HTTP } from '@ionic-native/http';
 import { HttpClient } from '@angular/common/http';
 
-/*
-  Generated class for the ChaptersProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class ChaptersProvider {
 
@@ -16,7 +9,6 @@ export class ChaptersProvider {
   constructor(
     private http: HttpClient
   ) {
-    console.log('Hello ChaptersProvider Provider');
     this.getChapters();
   }
 

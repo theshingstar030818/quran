@@ -19,10 +19,9 @@
 <ion-content>
 
   <ion-list>
-    <ion-item *ngFor="let chapter of chaptersProvider.chapters">
-      <ion-avatar item-start>
-        <img src="img/avatar-finn.png">
-      </ion-avatar>
+    <ion-item *ngFor="let chapter of chaptersProvider.chapters" (click)="openChapter(chapter.id)">
+      <img item-start imageSize src="assets/imgs/makkah.png" *ngIf="chapter.revelation_place == 'makkah'">
+      <img item-start imageSize src="assets/imgs/madina.png" *ngIf="chapter.revelation_place == 'madinah'">
       <p item-end>
         {{chapter?.name_arabic}}
       </p>

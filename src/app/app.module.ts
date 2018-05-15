@@ -11,6 +11,7 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ChaptersProvider } from '../providers/chapters/chapters';
+import { VerseProvider } from '../providers/verse/verse';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ChaptersProvider } from '../providers/chapters/chapters';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ChaptersProvider,
-    HTTP
+    HTTP,
+    VerseProvider
   ]
 })
 export class AppModule {}
