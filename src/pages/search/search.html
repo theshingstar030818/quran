@@ -17,5 +17,15 @@
 
 
 <ion-content padding>
-
+  <div class="row">
+      <ion-label centerAlignment>Please enter a word to search in Quran</ion-label>
+  </div>
+  <div class="row">
+      <ion-item>
+          <ion-input type="text" placeholder="Enter a word" [(ngModel)]="searchWord" required></ion-input>
+      </ion-item>
+  </div>
+  <div centerAlignment padding>
+    <button ion-button round (click)="searchWordButtonPressed()">Search</button>
+  </div>
 </ion-content>

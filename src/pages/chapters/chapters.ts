@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Spinner } from 'ionic-angular';
 import { ChaptersProvider } from '../../providers/chapters/chapters';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 
 /**
  * Generated class for the ChaptersPage page.
@@ -19,7 +20,7 @@ export class ChaptersPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public chaptersProvider: ChaptersProvider
+    public chaptersProvider: ChaptersProvider,
   ) {
   }
 
@@ -28,7 +29,6 @@ export class ChaptersPage {
   }
 
   openChapter(chapterId: number) {
-    debugger;
     this.navCtrl.push('VersesPage', {
       chapterId: chapterId
     });

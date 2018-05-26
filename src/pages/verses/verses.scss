@@ -1,3 +1,37 @@
 page-verses {
+   p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+   } 
 
+   h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+   }
+
+   [right] {
+       text-align: right;
+   }
+   [itemPadding] {
+       padding-left: 5px;
+       padding-right: 5px;
+   }
+   [horizontalScroll] {
+        overflow-x: auto;
+   }
+   [itemStyling] {
+    width: 80%;
+    
+   }
+   [textStyling] {
+       color: black;
+       font-size: 15px;
+
+   }
 }

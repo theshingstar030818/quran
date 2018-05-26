@@ -10,6 +10,7 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 import { ChaptersProvider } from '../providers/chapters/chapters';
 import { VerseProvider } from '../providers/verse/verse';
 
@@ -30,6 +31,7 @@ import { VerseProvider } from '../providers/verse/verse';
   providers: [
     StatusBar,
     SplashScreen,
+    SpinnerDialog,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ChaptersProvider,
     HTTP,

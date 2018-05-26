@@ -14,12 +14,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'search.html',
 })
 export class SearchPage {
+  searchWord: String;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.searchWord = "";
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SearchPage');
+  }
+
+  searchWordButtonPressed()  {
+    // search the word (call api) and then 
+    // go to another page with the list
+    // to show the occurence of the word
+    this.searchWord = "";
   }
 
 }
